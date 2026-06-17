@@ -1,3 +1,8 @@
+*** 0.52 ***
+- Fix "UPS OK" (safety) binary_sensor inverted: a healthy UPS (UpsOk=on) was
+  mapped to the safety "on" state and displayed as "Unsafe/Inseguro". Swapped
+  payload_on/payload_off in device.json so healthy = Safe/Seguro.
+
 *** 0.51 ***
 - Fix crash/restart loop on serial errors: ser.is_open is a property in
   pyserial 3.x, not a method. Calling ser.is_open() inside the serial

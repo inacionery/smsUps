@@ -110,8 +110,8 @@
                 "name": "UPS OK",
                 "val_tpl":"{{ value_json.UpsOk }}",
                 "device_class":"safety",
-                "pl_on": "on",
-                "pl_off": "off",
+                "pl_on": "off",
+                "pl_off": "on",
                 "pl_avail": "on",
                 "pl_not_avail": "off"
             },
