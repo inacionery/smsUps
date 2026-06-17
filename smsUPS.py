@@ -840,12 +840,12 @@ def send_command(cmd_name, cmd_string, sendQ = False):
             respHex = binascii.hexlify(bytearray(response))
         except serial.SerialException:
             status['serial'] = 'off'
-            serialOk = ser.is_open()
+            serialOk = ser.is_open
             respHex = ""
         except Exception as e:
             status['serial'] = 'off'
             mostraErro(e,30,"send_command")
-            serialOk = ser.is_open()
+            serialOk = ser.is_open
             respHex = ""
         if cmd_name != "query":  # evita muitas gravações no log
             log.debug ("response: " + str(respHex))

@@ -1,3 +1,9 @@
+*** 0.51 ***
+- Fix crash/restart loop on serial errors: ser.is_open is a property in
+  pyserial 3.x, not a method. Calling ser.is_open() inside the serial
+  exception handlers raised "TypeError: 'bool' object is not callable",
+  turning a recoverable serial hiccup into a fatal crash.
+
 *** 0.42 *** 
 - Fix Device-tree error 
 
